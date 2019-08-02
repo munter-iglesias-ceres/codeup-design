@@ -1,9 +1,11 @@
-@media screen and (min-width:576px) and (max-width:599px); {
-}
+@media screen and (min-width:576px)  {
 
-html {background-color: #E6E6E6;
+html {position: relative;
+    background-color: rgb(230 230 230);
     height: 100%;
-    width: 100vw;
+    width: 100%;
+    border: 0;
+    padding: 0;
 
 }
 
@@ -11,51 +13,66 @@ html {background-color: #E6E6E6;
 
     body {box-sizing: border-box;
         position:relative;
-        margin: 0;
+        margin: 5px;
         padding: 0;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto 20% 20% auto;
+        flex-wrap: wrap;
 
     }
 
 
+    .logo {display: grid;
+        grid-template-rows: auto auto auto;
+
+    }
     .line1 {
-        grid-area: 1 / 1 / 2 / 3;
-        background-color: #E6E6E6;
-        height: 40px;
+        grid-area: 1 / 1 / 2 / 2;
+        background-color: rgb(230 230 230);
+        height: 10px;
 
     }
 
-    .line2 {grid-area: 2 / 1 / 3 / -1;
+    .line2 {grid-area: 2 / 1 / 3 / 2;
         background-color: white;
         height: 10px;
         z-index: -5;
     }
 
     .line3 {grid-area: 3 / 1 / 4 / -1;
-        background-color: #E6E6E6;
+        background-color: rgb(230 230 230);
         height:10px;
     }
 
-    .codeup {
-        grid-area: 4 / 1 / 5 / 3;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-color: #E6e6e6;
-        font-family: 'Abel', sans-serif;
-        font-size: 48px;
+    header {display: grid;
+        grid-template-rows: auto;
+            grid-template-columns: auto auto auto auto;
+
+    }
+
+   header .cd { display: grid;
+                grid-area: 1 / 2 / 2 / 4;
+            text-align: center;
+             background-color: rgb(230 230 230);
+            font-family: 'Abel', sans-serif;
+       font-size: 90px;
 
 
 
     }
 
-   nav ul {margin: 0;
-       padding: 0;
-       border: 0;
-       grid-area: 5 / 1 / 6 / 3;
-        display: flex;
+   nav {display: grid;
+       grid-template-rows: auto;
+       grid-template-columns:  auto auto;
+       text-align: center;
+   }
+
+
+   ul {
+       display: flex;
+       grid-area: 1 / 1/ 2 / 3;
+        border: 0;
+       padding-top: 1.3em;
+       margin: 0;
+       padding-left: 0;
         flex-direction: row;
         justify-content: center;
         background-color: #E6E6E6;
@@ -71,8 +88,9 @@ html {background-color: #E6E6E6;
     li {display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: .25em;
-        font-size: 32px;
+        font-size: 30px;
+        text-align: center;
+        padding-right: 0.75em;
 
     }
 
@@ -82,216 +100,199 @@ html {background-color: #E6E6E6;
 
     }
 
+
+
     .title {
         grid-area: 6/ 1 / 7/ -1;
         display: flex;
         justify-content: center;
         background-color: #E6E6E6;
-        font-size: 64px;
+        font-size: 90px;
         font-family: 'Anton', sans-serif;
+        line-height: 100%;
 
     }
 
     .title2 {grid-area: 7/ 1 / 8/ -1;
         display: flex;
+        flex-wrap: wrap;
         background-color: #E6E6E6;
-        font-size: 64px;
+        font-size: 80px;
         justify-content: center;
         font-family: 'Anton', sans-serif;
+        margin: 0;
+
 
     }
 
     .location {
         grid-area: 8 / 1 / 9 / -1;
         display: flex;
+        margin-top: .15em;
         justify-content: center;
         background-color: #E6E6E6;
-        font-size: 36px;
+        font-size: 60px;
         font-family: 'Anton', sans-serif;
 
     }
 
-    .dd {display: grid;
-        flex-direction: column;
-        grid-area: 9 / 1 / 10 / -1;
-        background-color: #E6E6E6;
-        padding-left: 10%;
+    main {display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto auto auto auto;
+        margin-top: 4em;
+        margin-left: 20px;
+        grid-gap: 20px;
+    }
+
+    main .design-badge{display: grid;
+                    grid-area: 1 / 2 / 2 / 3;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #e6563b;
+                    line-height: 120px;
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 50%;
+                    font-family: 'Anton', sans-serif;
+                    color: white;
+                    font-size: 40px;
+                    margin: 0;
+                    border: 12px solid white;
+                     box-shadow: 1px 1px 1px black;
 
 
 
     }
 
-    /*.badge {display: grid;*/
-    /*    flex-direction: row;*/
-    /*    grid-area: 8/ 1 / 9 / 2;*/
-    /*    justify-content: center;*/
-
-    /*}*/
-
-
-
-    .badge-des{  display: grid;
-        flex-direction: column;
-        grid-area: 9 / 1 / 10 / 2;
+    main .develop-badge {display: grid;
+        grid-area: 1 / 3 / 2 / 4;
         justify-content: center;
         align-items: center;
-        background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #e6563b;
-        border: 2px solid white;
-        border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
-        box-shadow: 1px 1px 1px black;
+        background-color: #Eb9d3a;
+        line-height: 120px;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        font-family: 'Anton', sans-serif;
         color: white;
-        font: bold 15px/13px Helvetica, Verdana, Tahoma;
-        height: 150px;
-        width: 150px;
+        font-size: 40px;
+        margin: 0;
+        border: 12px solid white;
+        box-shadow: 1px 1px 1px black;
 
-        padding: 4px 0 0 3px;
-        text-align: center;
+
     }
 
-    .badge-dev { display: grid;
-        flex-direction: column;
-        grid-area: 9 / 2 / 10 / 3;
+    main .support-badge {display: grid;
+        grid-area: 2 / 2 / 3 / 3;
         justify-content: center;
         align-items: center;
-        background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #EB9D3A;
-        border: 2px solid white;
-        border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
-        box-shadow: 1px 1px 1px black;
+        background-color: #7cb06c;
+        line-height: 120px;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        font-family: 'Anton', sans-serif;;
         color: white;
-        font: bold 15px/13px Helvetica, Verdana, Tahoma;
-        height: 150px;
-        width: 150px;
-
-        padding: 4px 3px 0 3px;
-        text-align: center;
+        font-size: 40px;
+        margin: 0;
+        border: 12px solid white;
+        box-shadow: 1px 1px 1px black;
 
     }
 
-    .sh {
-        grid-area: 10 / 1 / 11 / 2;
+
+    main .host-badge {
+        display: grid;
+        grid-area: 2 / 3 / 3 / 4;
+        justify-content: center;
+        align-items: center;
+        background-color: #00aba9;
+        line-height: 120px;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        font-family: 'Anton', sans-serif;;
+        color: white;
+        font-size: 40px;
+        margin: 0;
+        border: 12px solid white;
+        box-shadow: 1px 1px 1px black;
+    }
+
+
+
+
+
+    .sw  {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color: #E6E6E6;
-    }
-
-
-    .badge-support {display: grid;
-                grid-area: 10 / 1/ 11 / 2;
-                flex-direction: column;
-                background-color: #E6E6E6;
-                justify-content: center;
-                align-items: center;
-                background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-                background-color: rgb(118 176 113);
-                border: 2px solid white;
-                border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
-                 box-shadow: 1px 1px 1px black;
-                color: white;
-                 font: bold 15px/13px Helvetica, Verdana, Tahoma;
-                height: 150px;
-                width: 150px;
-
-                 padding: 4px 3px 0 3px;
-                    text-align: center;
-
-            }
-
-    .support {grid-area: 10 / 1 / 11 / 2;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
+        font-size:  23px;
+        font-family: 'Abel', sans-serif;
+        margin-top: 200px;
+        color: black;
+        margin-bottom: 3em;
 
 
     }
 
-    .badge-host {
-        grid-area: 10 / 2 / 11 / 3;
-        flex-direction: row;
-        background-color: #E6E6E6;
-        justify-content: center;
-        align-items: center;
-        background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #EB9D3A;
-        border: 2px solid white;
-        border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
-        box-shadow: 1px 1px 1px black;
-        color: white;
-        font: bold 15px/13px Helvetica, Verdana, Tahoma;
-        height: 150px;
-        width: 150px;
-        padding: 4px 3px 0 3px;
-        text-align: center;
 
-    }
-.host {grid-area: 10 / 2 / 11 /3;
-        flex-direction: column;
-        justify-content: center;
-    background-color: #E6E6E6;
-    margin-left: 10%;
-}
-
-
-.sw {grid-area: 11 / 1 / 12 / 3;
+ img {display: flex;
     flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    font-family: 'Abel', sans-serif;}
-
-
-.apple {grid-area: 12/ 1 / 13 / 3;
-    display: grid;
-    flex-direction: row;
-    justify-content: center;
-
-
-
-}
-
- img {grid-area: 12/ 1 / 13 / 3;
-    display: grid;
-    flex-direction: row;
-     justify-content: center;
+     align-content: center;
      width: 500px;
      height: 300px;
-     padding: 0;
+     margin: auto auto 0 auto;
+     border: 10px solid rgba(225 225 225);
+     border-radius: 2%;
+
     }
 
 
 
-p  {grid-area: 13 / 1 / 14 / 3;
-            display: grid;
-            flex-direction: row;
-            text-align: justify;
-        font-size:  20px;
-        margin-left: 30px;
-
+footer {display: grid;
+        grid-template-rows: 25px;
+        grid-template-columns: 70% 30%;
 
 }
 
-ul {grid-area: 13 / 2 / 14/ 3;
+footer p {display: flex;
+        grid-area: 1 / 1 / 2 / 2;
+        margin-left: 15px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+}
+
+
+footer ul {grid-area: 1 / 2 / 2/ 3;
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    line-height: 100%;
+    margin-left: 30px;
+
 
 }
 
-li {grid-area: 13 / 2 / 14/ 3;
+li {grid-area: 1 / 2 / 2/ 3;
     display: flex;
     flex-direction: row;
+    line-height: 100%;
+    align-items: center;
 }
 
 
-.icons {grid-area: 13 / 2 / 14/ 3;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+.icons {
+    grid-area: 1 / 2 / 2/ 3;
+    display: flex;
+    flex-direction: row;
 
 
+
+
+}
 
 
 }
@@ -301,7 +302,7 @@ li {grid-area: 13 / 2 / 14/ 3;
         background-color: #E6E6E6;
         justify-content: center;
         background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #EB9D3A;
+        background-color: #e6563b;
         border: 2px solid white;
         border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
         box-shadow: 1px 1px 1px black;
@@ -314,7 +315,7 @@ li {grid-area: 13 / 2 / 14/ 3;
 
 }
     .icon2 {margin: 0;
-        background-color: #E6E6E6;
+        background-color: #eb93da;
         justify-content: center;
         background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
         background-color: #EB9D3A;
@@ -334,7 +335,7 @@ li {grid-area: 13 / 2 / 14/ 3;
         background-color: #E6E6E6;
         justify-content: center;
         background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #EB9D3A;
+        background-color: #7cb06c;
         border: 2px solid white;
         border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
         box-shadow: 1px 1px 1px black;
@@ -351,7 +352,7 @@ li {grid-area: 13 / 2 / 14/ 3;
         background-color: #E6E6E6;
         justify-content: center;
         background: radial-gradient( 5px -9px, circle, white 8%, red 26px );
-        background-color: #EB9D3A;
+        background-color: #00aba9;
         border: 2px solid white;
         border-radius: 75px; /* one half of ( (border * 2) + height + padding ) */
         box-shadow: 1px 1px 1px black;
@@ -364,7 +365,6 @@ li {grid-area: 13 / 2 / 14/ 3;
 
     }
 }
-
 
 
 
